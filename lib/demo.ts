@@ -1,0 +1,83 @@
+import { Property } from "@/types";
+
+export const isDemoMode =
+  !process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+  !process.env.EXPO_PUBLIC_SUPABASE_URL ||
+  !process.env.EXPO_PUBLIC_SUPABASE_KEY;
+
+const image = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=80`;
+
+export const demoProperties: Property[] = [
+  {
+    id: "demo-villa",
+    title: "Modern Luxury Villa",
+    description: "A bright modern villa with an open floor plan, large windows, and a private pool.",
+    price: 12500000,
+    type: "villa",
+    bedrooms: 4,
+    bathrooms: 3,
+    area_sqft: 3200,
+    address: "14 Palm Grove Lane",
+    city: "Mumbai",
+    latitude: 19.1136,
+    longitude: 72.8697,
+    images: [image("photo-1613977257363-707ba9348227"), image("photo-1560448204-603b3fc33ddc")],
+    is_featured: true,
+    is_sold: false,
+    created_at: "2026-01-03T00:00:00.000Z",
+  },
+  {
+    id: "demo-penthouse",
+    title: "Sky View Penthouse",
+    description: "A breathtaking penthouse with panoramic city views, a private terrace, and premium finishes.",
+    price: 28000000,
+    type: "apartment",
+    bedrooms: 3,
+    bathrooms: 2,
+    area_sqft: 2800,
+    address: "1 Skyline Tower, BKC",
+    city: "Mumbai",
+    latitude: 19.0596,
+    longitude: 72.8656,
+    images: [image("photo-1512917774080-9991f1c4c750"), image("photo-1502672260266-1c1ef2d93688")],
+    is_featured: true,
+    is_sold: false,
+    created_at: "2026-01-02T00:00:00.000Z",
+  },
+  {
+    id: "demo-bungalow",
+    title: "Green Valley Bungalow",
+    description: "A spacious bungalow surrounded by greenery with a large garden and modern kitchen.",
+    price: 8500000,
+    type: "house",
+    bedrooms: 5,
+    bathrooms: 4,
+    area_sqft: 4500,
+    address: "7 Green Valley Road",
+    city: "Bangalore",
+    latitude: 12.9716,
+    longitude: 77.5946,
+    images: [image("photo-1564013799919-ab600027ffc6"), image("photo-1568605114967-8130f3a36994")],
+    is_featured: true,
+    is_sold: false,
+    created_at: "2026-01-01T00:00:00.000Z",
+  },
+  {
+    id: "demo-studio",
+    title: "Downtown Studio Loft",
+    description: "A chic studio loft close to metro stations, cafes, and offices.",
+    price: 3200000,
+    type: "studio",
+    bedrooms: 1,
+    bathrooms: 1,
+    area_sqft: 650,
+    address: "22 MG Road",
+    city: "Bangalore",
+    latitude: 12.9756,
+    longitude: 77.6097,
+    images: [image("photo-1554995207-c18c203602cb"), image("photo-1493809842364-78817add7ffb")],
+    is_featured: false,
+    is_sold: false,
+    created_at: "2025-12-31T00:00:00.000Z",
+  },
+];
